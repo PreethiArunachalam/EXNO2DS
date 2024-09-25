@@ -54,6 +54,7 @@ df.shape
 ```
 ![Screenshot 2024-09-10 160853](https://github.com/user-attachments/assets/a29dfd03-bb1a-47f1-8f06-7986dd780501)
 
+## Categorical data analysis:
 ```
 df.nunique()
 ```
@@ -80,6 +81,7 @@ df.Pclass.unique()
 ```
 ![Screenshot 2024-09-10 161242](https://github.com/user-attachments/assets/1654be75-8202-42dd-aa4d-3fdaa4e88cdd)
 
+## Bivariate Analysis:
 ```
 sns.catplot(x="Gender",col="Survived",kind="count",data=df,height=5,aspect=.7)
 ```
@@ -105,6 +107,8 @@ sns.jointplot(x="Age",y="Fare",data=df)
 ```
 ![Screenshot 2024-09-10 161614](https://github.com/user-attachments/assets/7c9b0969-565c-40e1-b255-b59a9571911b)
 
+## Multivariate Analysis:
+
 ```
 fig, ax1 = plt.subplots(figsize=(8,5))
 plt = sns.boxplot(ax=ax1,x='Pclass',y='Age',hue='Gender',data=df)
@@ -116,6 +120,7 @@ sns.catplot(data=df,col="Survived",x="Gender",hue="Pclass",kind="count")
 ```
 ![Screenshot 2024-09-10 161747](https://github.com/user-attachments/assets/4e9bd19a-f1e8-4b4f-bd03-baf28f2f09b0)
 
+## Co-relation:
 ```
 numeric_df = df.select_dtypes(include=[np.number])
 corr = numeric_df.corr()
